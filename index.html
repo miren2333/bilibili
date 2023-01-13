@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilibili</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/index.js" type="module"></script> -->
+</head>
+
+<body>
+    <header>
+        <!-- 顶部导航条 -->
+        <div class="top">
+            <div class="navtop">
+                <ul class="navleft">
+                    <li>
+                        <a href=""><img class="navleft-image" id="change-color" src="./image/bilibili-line.svg"
+                                alt=""></a>
+                        <a href="">首页</a>
+                    </li>
+                    <li class="jump-world"><a href="">番剧</a></li>
+                    <li class="jump-world"><a href="">直播</a></li>
+                    <li class="jump-world"><a href="">游戏中心</a></li>
+                    <li class="jump-world"><a href="">会员购</a></li>
+                    <li class="jump-world"><a href="">漫画</a></li>
+                    <li class="jump-world"><a href="">赛事</a></li>
+                    <li class="jump-world"><a href="">看足球</a></li>
+                    <li class="jump-world"><a href="">跨年</a></li>
+                    <li id="hover-hide-download-client">
+                        <a href=""><img class="navleft-image" id="change-color" src="./image/xiazai.svg" alt=""></a>
+                        <a href="">下载客户端</a>
+                    </li>
+                </ul>
+                <div class="center-search">
+                    <input type="text" class="search-input" placeholder="世界杯以产生16强">
+                    <a href="" class="serach-case">
+                        <img src="./image/search.svg" alt="">
+                    </a>
+                </div>
+
+                <ul class="navright">
+                    <li>
+                        <a href="" class="Head-portrait-box">
+                            <img src="./image/touxiang.jpg" alt="" id="Head-portrait-box-bigImg">
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img id="change-color" src="./image/wodedahuiyuan.png" alt=""><br />
+                            <span>大会员</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img id="change-color" src="./image/xinfeng.png" alt=""><br />
+                            <span>消息</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img id="change-color" src="./image/fengche.png" alt=""><br />
+                            <span>动态</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img id="change-color" src="./image/shoucang.png" alt=""><br />
+                            <span>收藏</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img id="change-color" src="./image/shizhong.png" alt=""><br />
+                            <span>历史</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img id="change-color" src="./image/dengpao.png" alt=""><br />
+                            <span>创作中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="tougao-button">
+                            <a href="">
+                                <img id="change-color" src="./image/yunshangchuan.png" alt="">
+                                <span>投稿</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- 头像大头弹出 -->
+                <div class="Pop-up-avatar" id="Pop-up-avatar1">
+                    <div class="Large-head-portrait">
+                        <img class="Large-head-portrait-img1" src="./image/touxiang.jpg" alt="">
+                        <img class="Large-head-portrait-img2" src="./image/touxiangguajian.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 下载客户端弹出 -->
+                <div class="hide-download-client" id="hide-Download-client">
+                    <div class="hide-download-client-content">
+                        <div class="hide-download-client-content-top">
+                            <div class="double-content">
+                                <div class="double-content-top"><img src="./image/shouji.png" alt=""
+                                        class="double-content-img-1"><span>手机版</span></div>
+                                <span>扫码即可下载手机APP</span>
+                                <img src="./image/kehuduan.png" alt="" class="double-content-img-2">
+                            </div>
+                            <div class="double-content">
+                                <div><img src="./image/diannao_o.png" alt=""
+                                        class="double-content-img-1"><span>Windows端</span></div>
+                                <span>适合WIN系统设备</span>
+                                <img src="./image/bilibili-1.png" alt="" class="double-content-img-3">
+                                <a href="">
+                                    <div class="Download-Now"><span>立即下载</span></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hide-download-client-content-bottom">
+                            <a href="">
+                                <span>点击查看更多下载内容</span>
+                                <img src="./image/xiangyoujiantou.png" alt="" class="double-content-img-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 头像信息弹出 -->
+                <div class="test" id="bigImgItems">
+                    <div class="level-item">
+                        <div class="nickname-item"><a href="">
+                                <div>test</div>
+                            </a></div>
+                        <div class="nickname-item-coin"><a href=""><span>硬币:888</span><span>B币:0</span></a></div>
+                    </div>
+                    <div class="total-speed-of-progress">
+                        <img src="./image/lv4.png" alt="">
+                        <div class="speed-of-progress">
+                            <div class="speed-of-progress-percent"></div>
+                        </div>
+                        <img src="./image/lv5.png" alt="">
+                    </div>
+                    <div class="upgrade-explain">当前成长20830，距离升级Lv5还需要7970</div>
+                    <div class="follow-items">
+                        <a href="">
+                            <div>54</div>
+                            <div>关注</div>
+                        </a>
+                        <a href="">
+                            <div>3</div>
+                            <div>粉丝</div>
+                        </a>
+                        <a href="">
+                            <div>26</div>
+                            <div>动态</div>
+                        </a>
+                    </div>
+                    <a href="" class="Personal-Center">
+                        <div><img src="./image/w_laoshi.png" alt="" class="Personal-Center-left-icon"><span>个人中心</span>
+                        </div><img src="./image/xiangyoujiantou.png" alt="" class="Personal-Center-right-icon">
+                    </a>
+                    <a href="" class="Personal-Center">
+                        <div><img src="./image/xinfeng.png" alt="" class="Personal-Center-left-icon"><span>投稿管理</span>
+                        </div><img src="./image/xiangyoujiantou.png" alt="" class="Personal-Center-right-icon">
+                    </a>
+                    <a href="" class="Personal-Center">
+                        <div><img src="./image/shoucang.png" alt="" class="Personal-Center-left-icon"><span>推荐服务</span>
+                        </div><img src="./image/xiangyoujiantou.png" alt="" class="Personal-Center-right-icon">
+                    </a>
+                    <div class="split-line"></div>
+                    <div class="Exit-Login">
+                        <a href="">
+                            <img src="./image/tuichu.png" alt="">
+                            <span>退出登陆</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 视频分区信息 -->
+        <div class="middle-channel">
+            <ul class="left-channel">
+                <li>
+                    <a href="">
+                        <img class="touxiang-channel" src="./image/touxiang.jpg" alt=""><br />
+                        <span>动态</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="left-circle1"><img id="change-color" src="./image/fire.png" alt=""
+                                class="double-channel"></div>
+                        <span>热门</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="left-circle2"><img id="change-color" src="./image/channel.png" alt=""
+                                class="double-channel"></div>
+                        <span>频道</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="right-channel">
+                <div class="left-grid-channel">
+                    <a href="" class="items">番剧</a>
+                    <a href="" class="items">国创</a>
+                    <a href="" class="items">综艺</a>
+                    <a href="" class="items">动画</a>
+                    <a href="" class="items">鬼畜</a>
+                    <a href="" class="items">舞蹈</a>
+                    <a href="" class="items">娱乐</a>
+                    <a href="" class="items">科技</a>
+                    <a href="" class="items">美食</a>
+                    <a href="" class="items">电影</a>
+                    <a href="" class="items">电视剧</a>
+                    <a href="" class="items">纪录片</a>
+                    <a href="" class="items">游戏</a>
+                    <a href="" class="items">音乐</a>
+                    <a href="" class="items">影视</a>
+                    <a href="" class="items">知识</a>
+                    <a href="" class="items">资讯</a>
+                    <a href="" class="items">更多</a>
+                </div>
+                <ul class="right-grid-channel">
+                    <li>
+                        <a href="">
+                            <img src="./image/wenzhang.png" alt="">
+                            <span>专栏</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/qizi.png" alt="">
+                            <span>活动</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/duihua.png" alt="">
+                            <span>社区中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/shipin.png" alt="">
+                            <span>直播</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/xiaolian.png" alt="">
+                            <span>课堂</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/yinyue.png" alt="">
+                            <span>新歌热榜</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+     
+        <!-- 视频推送部分 -->
+        <ul class="video-details">
+            <li>
+                <span class="hide-part">隐藏</span>
+            </li>
+            <li>
+                <span class="hide-part">隐藏</span>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/6.avif" alt="">
+                    <span class="title">萌新三句话，让影月月笑出声</span>
+                    <span class="author">2万点赞 老邵邵邵</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/7.avif" alt="">
+                    <span class="title">[毕业通知] 回火星啦！地球晚安！</span>
+                    <span class="author">此账号已注销 11-15</span>
+                </a>
+            </li>
+            <li>
+                <span class="hide-part">隐藏</span>
+            </li>
+            <li>
+                <span class="hide-part">隐藏</span>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/8.avif" alt="">
+                    <span class="title">开局魔盗团转职？懂了，这就拉满奖励！</span>
+                    <span class="author">云顶猫咪 12-4</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/9.avif" alt="">
+                    <span class="title">直播真会玩女神篇：世界上的另一个我#155</span>
+                    <span class="author">已关注 是大腿</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/1.avif" alt="">
+                    <span class="title">戳我学剪辑思维，自由副业轻松养活自己</span>
+                    <span class="author">米塔在线</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/2.avif" alt="">
+                    <span class="title">【第一届仙灵杯】甘雨赛事精彩解说</span>
+                    <span class="author">阿冷Office 12-7</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/3.avif" alt="">
+                    <span class="title">当代驾小哥遇上：劳斯莱斯-库里南！是一种什么样的体验？紧张到手脚发抖！</span>
+                    <span class="author">囧弟代驾vlog 12-4</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="./image/4.avif" alt="">
+                    <span class="title">直播真会玩女神篇：世界上的另一个我#155</span>
+                    <span class="author">已关注 是大腿</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- swiper轮播图 -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href=""><img src="./image/11.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/12.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/13.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/14.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/15.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/16.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/17.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/18.avif" alt=""></a></div>
+                <div class="swiper-slide"><a href=""><img src="./image/19.avif" alt=""></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- 右侧固定内侧选项 -->
+        <div class="fix-frame">
+            <a href="" class="fix-title1"><span>新版反馈</span></a>
+            <a href="" class="fix-title2"><img src="./image/kefu.png" alt=""><br /><span>客服</span></a>
+            <a href="" class="fix-title3"><span>退出内测</span></a>
+            <a href="" class="fix-title4" id="hide"><img src="./image/sanjiao.png" alt=""><br /><span>顶部</span></a>
+        </div>
+
+        <!-- 直播推荐块 -->
+        <div class="Live-recommendation">
+            <div class="header-Live">
+                <span id="Live-classification">电台</span>
+                <a href="">
+                    <span>查看更多</span>
+                    <img class="check-more" src="./image/xiangyoujiantou.png" alt="">
+                </a>
+            </div>
+            <div class="Live-broadcast-block">
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo1.png" alt="">
+                        <div id="radio-station-type">唱见电台</div>
+                        <div class="radio-station-title">重生之我在工厂柠螺丝</div>
+                        <div class="radio-station-details">
+                            <span>深深</span>
+                            <span class="radio-station-number">2733</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo2.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">绿色主播</div>
+                        <div class="radio-station-details">
+                            <span>春天的猫发烧了</span>
+                            <span class="radio-station-number">1150</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo3.png" alt="">
+                        <div id="radio-station-type">唱见电台</div>
+                        <div class="radio-station-title">唱歌时间！</div>
+                        <div class="radio-station-details">
+                            <span>菠萝</span>
+                            <span class="radio-station-number">4512</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo4.png" alt="">
+                        <div id="radio-station-type">唱见电台</div>
+                        <div class="radio-station-title">河北王若琳</div>
+                        <div class="radio-station-details">
+                            <span>好梦卡密尔</span>
+                            <span class="radio-station-number">5142</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo5.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">重庆甜妹</div>
+                        <div class="radio-station-details">
+                            <span>雾绵绵子21号</span>
+                            <span class="radio-station-number">101</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo6.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">甜妹和御姐你想要哪一个</div>
+                        <div class="radio-station-details">
+                            <span>妖精姐姐</span>
+                            <span class="radio-station-number">534</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo7.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">刚学会撒娇八连</div>
+                        <div class="radio-station-details">
+                            <span>手撕大白兔</span>
+                            <span class="radio-station-number">444</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo8.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">今天满月啦</div>
+                        <div class="radio-station-details">
+                            <span>好御一口</span>
+                            <span class="radio-station-number">555</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo9.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">大家身体都还好吗</div>
+                        <div class="radio-station-details">
+                            <span>文静也要萌萌哒</span>
+                            <span class="radio-station-number">666</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rooms">
+                    <a href="">
+                        <img class="Live-cover" src="./image/zhibo10.png" alt="">
+                        <div id="radio-station-type">聊天电台</div>
+                        <div class="radio-station-title">来吧，都是你爱听的</div>
+                        <div class="radio-station-details">
+                            <span>半夏青柠</span>
+                            <span class="radio-station-number">41</span>
+                            <img src="./image/yanjing.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="footer-information">
+                <div class="footer-left">
+                    <div class="footer-left-top">
+                        <div class="footer-detail-left">
+                            <div class="bilibili-footer-logo"><img src="./image/bilibili.png" alt=""></div>
+                            <a href="" class="footer-change-font-color">关于我们</a>
+                            <a href="" class="footer-change-font-color">友情链接</a>
+                            <a href="" class="footer-change-font-color">bilibili周边</a>
+                            <a href="" class="footer-change-font-color">联系我们</a>
+                            <a href="" class="footer-change-font-color">加入我们</a>
+                            <a href="" class="footer-change-font-color">bilibili直播服务协议</a>
+                            <div class="footer-right-frame"></div>
+                        </div>
+                        <div class="footer-detail-right">
+                            <a href="" class="footer-change-font-color">帮助中心</a>
+                            <a href="" class="footer-change-font-color">工具使用教程</a>
+                            <a href="" class="footer-change-font-color">如何成为主播</a>
+                            <a href="" class="footer-change-font-color">工会中心</a>
+                        </div>
+                    </div>
+                    <div class="footer-left-bottom">
+                        <div class="footer-left-bottom-img">
+                            <img src="./image/hezuojigou.png" alt="">
+                            <img src="./image/kankanxinwen.png" alt="">
+                        </div>
+                        <div class="footer-left-bottom-detail">
+                            <ul>
+                                <li>广播电视节目制作经营许可证：(沪) 字第 1248 号</li>
+                                <li>网络文化经营许可证：沪网文 [2013]0480-056 号</li>
+                                <li>信息网络传播视听节目许可证：0910417</li>
+                                <br />
+                            </ul>
+                            <ul>
+                                <li>互联网 ICP 备案：沪 ICP 备 13002172 号 - 3</li>
+                                <li>沪 ICP 证：沪 B2-20100043</li>
+                                <li><a href="" class="footer-change-font-color">12318 全国文化市场举报网站</a></li>
+                                <li><a href="" class="footer-change-font-color">上海市互联网违法和不良信息举报中心</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="footer-right-img"><img src="./image/shouji.png" alt=""></div>
+                                <div class="footer-right-title">直播姬APP下载</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="footer-right-img"><img src="./image/w_laoshi.png" alt=""></div>
+                                <div class="footer-right-title">联系客服</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="footer-right-img"><img src="./image/weixin.png" alt=""></div>
+                                <div class="footer-right-title">官方微信</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="footer-right-img"><img src="./image/weibo.png" alt=""></div>
+                                <div class="footer-right-title">新浪微博</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 可视窗口到达一定位置时的顶部导航条 -->
+        <div class="father-second-navtop" id="hide-second-navtop">
+            <div class="second-navtop">
+                <ul class="second-navleft">
+                    <li><a href=""><img class="second-navleft-image" src="./image/bilibili.png" alt=""></a></li>
+                    <li><a href="">首页</a></li>
+                    <li class="jump-world"><a href="">番剧</a></li>
+                    <li class="jump-world"><a href="">直播</a></li>
+                    <li class="jump-world"><a href="">游戏中心</a></li>
+                    <li class="jump-world"><a href="">会员购</a></li>
+                    <li class="jump-world"><a href="">漫画</a></li>
+                    <li class="jump-world"><a href="">赛事</a></li>
+                    <li class="jump-world"><a href="">看足球</a></li>
+                    <li class="jump-world"><a href="">跨年</a></li>
+                    <li id="father-second-navtop-downloading">
+                        <a href=""><img class="second-navleft-image1" src="./image/xiazai.svg" alt=""></a>
+                        <a href="">下载客户端</a>
+                    </li>
+                </ul>
+
+                <div class="second-center-search">
+                    <input type="text" class="second-search-input" placeholder="世界杯以产生16强">
+                    <a href="" class="second-serach-case">
+                        <img src="./image/search.svg" alt="">
+                    </a>
+                </div>
+
+                <ul class="second-navright">
+                    <li id="father-bigImg">
+                        <a href="" class="second-Head-portrait-box">
+                            <img src="./image/touxiang.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img src="./image/wodedahuiyuan.png" alt=""><br />
+                            <span>大会员</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img src="./image/xinfeng.png" alt=""><br />
+                            <span>消息</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img src="./image/fengche.png" alt=""><br />
+                            <span>动态</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img src="./image/shoucang.png" alt=""><br />
+                            <span>收藏</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img src="./image/shizhong.png" alt=""><br />
+                            <span>历史</span>
+                        </a>
+                    </li>
+                    <li class="jump-world1">
+                        <a href="">
+                            <img src="./image/dengpao.png" alt=""><br />
+                            <span>创作中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="second-tougao-button">
+                            <a href="">
+                                <img src="./image/yunshangchuan.png" alt="">
+                                <span>投稿</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 下载客户端弹出 -->
+            <div class="hide-download-client1" id="hide-Download-client1">
+                <div class="hide-download-client-content1">
+                    <div class="hide-download-client-content-top1">
+                        <div class="double-content1">
+                            <div class="double-content-top1"><img src="./image/shouji.png" alt=""
+                                    class="double-content-img-10"><span>手机版</span></div>
+                            <span>扫码即可下载手机APP</span>
+                            <img src="./image/kehuduan.png" alt="" class="double-content-img-20">
+                        </div>
+                        <div class="double-content1">
+                            <div><img src="./image/diannao_o.png" alt=""
+                                    class="double-content-img-10"><span>Windows端</span></div>
+                            <span>适合WIN系统设备</span>
+                            <img src="./image/bilibili-1.png" alt="" class="double-content-img-30">
+                            <a href="">
+                                <div class="Download-Now1"><span>立即下载</span></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hide-download-client-content-bottom1">
+                        <a href="">
+                            <span>点击查看更多下载内容</span>
+                            <img src="./image/xiangyoujiantou.png" alt="" class="double-content-img-40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 头像大头弹出 -->
+            <div class="Pop-up-avatar1" id="Pop-up-avatar2">
+                <div class="Large-head-portrait1">
+                    <img class="Large-head-portrait-img10" src="./image/touxiang.jpg" alt="">
+                    <img class="Large-head-portrait-img20" src="./image/touxiangguajian.png" alt="">
+                </div>
+            </div>
+
+            <!-- 头像信息弹出 -->
+            <div class="test1" id="bigImgItems1">
+                <div class="level-item1">
+                    <div class="nickname-item1"><a href="">
+                            <div>test</div>
+                        </a></div>
+                    <div class="nickname-item-coin1"><a href=""><span>硬币:888</span><span>B币:0</span></a></div>
+                </div>
+                <div class="total-speed-of-progress1">
+                    <img src="./image/lv4.png" alt="">
+                    <div class="speed-of-progress1">
+                        <div class="speed-of-progress-percent1"></div>
+                    </div>
+                    <img src="./image/lv5.png" alt="">
+                </div>
+                <div class="upgrade-explain1">当前成长20830，距离升级Lv5还需要7970</div>
+                <div class="follow-items1">
+                    <a href="">
+                        <div>54</div>
+                        <div>关注</div>
+                    </a>
+                    <a href="">
+                        <div>3</div>
+                        <div>粉丝</div>
+                    </a>
+                    <a href="">
+                        <div>26</div>
+                        <div>动态</div>
+                    </a>
+                </div>
+                <a href="" class="Personal-Center1">
+                    <div><img src="./image/w_laoshi.png" alt="" class="Personal-Center-left-icon1"><span>个人中心</span>
+                    </div><img src="./image/xiangyoujiantou.png" alt="" class="Personal-Center-right-icon1">
+                </a>
+                <a href="" class="Personal-Center1">
+                    <div><img src="./image/xinfeng.png" alt="" class="Personal-Center-left-icon1"><span>投稿管理</span>
+                    </div><img src="./image/xiangyoujiantou.png" alt="" class="Personal-Center-right-icon1">
+                </a>
+                <a href="" class="Personal-Center1">
+                    <div><img src="./image/shoucang.png" alt="" class="Personal-Center-left-icon1"><span>推荐服务</span>
+                    </div><img src="./image/xiangyoujiantou.png" alt="" class="Personal-Center-right-icon1">
+                </a>
+                <div class="split-line1"></div>
+                <div class="Exit-Login1">
+                    <a href="">
+                        <img src="./image/tuichu.png" alt="">
+                        <span>退出登陆</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        // 轮播图部分
+        var mySwiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            paginationClickable: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // 循环判断某些块是否应该显示
+        setInterval(
+            function () {
+                var pageYoffset = document.documentElement.scrollTop || document.body.scrollTop;
+                if (pageYoffset > 200) {
+                    document.getElementById("hide").style.display = "block"
+                } else {
+                    document.getElementById("hide").style.display = "none"
+                }
+                if (pageYoffset > 80) {
+                    document.getElementById("hide-second-navtop").style.display = "block"
+                } else {
+                    document.getElementById("hide-second-navtop").style.display = "none"
+                }
+            }, 20);
+
+        // 控制显示与隐藏
+        var downloadClient = document.getElementById("hover-hide-download-client")
+        var hideDownloadClient = document.getElementById("hide-Download-client")
+        var hideDownloadClient1 = document.getElementById("hide-Download-client1")
+        var fatherSecondNavtopDownloading = document.getElementById("father-second-navtop-downloading")
+        downloadClient.onmousemove = function () {
+            hideDownloadClient.style.display = "block"
+        }
+        downloadClient.onmouseout = function () {
+            hideDownloadClient.style.display = "none"
+        }
+        fatherSecondNavtopDownloading.onmousemove = function () {
+            hideDownloadClient1.style.display = "block"
+        }
+        fatherSecondNavtopDownloading.onmouseout = function () {
+            hideDownloadClient1.style.display = "none"
+        }
+        hideDownloadClient.onmousemove = function () {
+            hideDownloadClient.style.display = "block"
+        }
+        hideDownloadClient.onmouseout = function () {
+            hideDownloadClient.style.display = "none"
+        }
+        hideDownloadClient1.onmousemove = function () {
+            hideDownloadClient1.style.display = "block"
+        }
+        hideDownloadClient1.onmouseout = function () {
+            hideDownloadClient1.style.display = "none"
+        }
+
+        var bigImg = document.getElementById("Head-portrait-box-bigImg")
+        var bigImgItems = document.getElementById("bigImgItems")
+        var bigImgItems1 = document.getElementById("bigImgItems1")
+        var popUpAvatar = document.getElementById("Pop-up-avatar1")
+        var popUpAvatar1 = document.getElementById("Pop-up-avatar2")
+        var fatherBigImg = document.getElementById("father-bigImg")
+
+        bigImg.onmousemove = function () {
+            bigImgItems.style.visibility = "visible"
+            popUpAvatar.style.visibility = "visible"
+            bigImg.style.visibility = "hidden"
+        }
+
+        fatherBigImg.onmousemove = function () {
+            bigImgItems1.style.visibility = "visible"
+            popUpAvatar1.style.visibility = "visible"
+            fatherBigImg.style.visibility = "hidden"
+        }
+
+        bigImgItems.onmousemove = function () {
+            bigImgItems.style.visibility = "visible"
+            popUpAvatar.style.visibility = "visible"
+            bigImg.style.visibility = "hidden"
+            fatherBigImg.style.visibility = "hidden"
+        }
+        bigImgItems1.onmousemove = function () {
+            bigImgItems1.style.visibility = "visible"
+            popUpAvatar1.style.visibility = "visible"
+            fatherBigImg.style.visibility = "hidden"
+        }
+        popUpAvatar.onmousemove = function () {
+            bigImgItems.style.visibility = "visible"
+            popUpAvatar.style.visibility = "visible"
+            bigImg.style.visibility = "hidden"
+            fatherBigImg.style.visibility = "hidden"
+        }
+        popUpAvatar1.onmousemove = function () {
+            bigImgItems1.style.visibility = "visible"
+            popUpAvatar1.style.visibility = "visible"
+            fatherBigImg.style.visibility = "hidden"
+        }
+
+        bigImg.onmouseout = function () {
+            bigImgItems.style.visibility = "hidden"
+            popUpAvatar.style.visibility = "hidden"
+            bigImg.style.visibility = "visible"
+        }
+
+        fatherBigImg.onmouseout = function () {
+            bigImgItems1.style.visibility = "hidden"
+            popUpAvatar1.style.visibility = "hidden"
+            fatherBigImg.style.visibility = "visible"
+        }
+
+        bigImgItems.onmouseout = function () {
+            bigImgItems.style.visibility = "hidden"
+            popUpAvatar.style.visibility = "hidden"
+            bigImg.style.visibility = "visible"
+            fatherBigImg.style.visibility = "visible"
+        }
+        bigImgItems1.onmouseout = function () {
+            bigImgItems1.style.visibility = "hidden"
+            popUpAvatar1.style.visibility = "hidden"
+            fatherBigImg.style.visibility = "visible"
+        }
+        popUpAvatar.onmouseout = function () {
+            bigImgItems.style.visibility = "hidden"
+            popUpAvatar.style.visibility = "hidden"
+            bigImg.style.visibility = "visible"
+            fatherBigImg.style.visibility = "visible"
+        }
+        popUpAvatar1.onmouseout = function () {
+            bigImgItems1.style.visibility = "hidden"
+            popUpAvatar1.style.visibility = "hidden"
+            bigImg.style.visibility = "visible"
+            fatherBigImg.style.visibility = "visible"
+        }
+
+    </script>
+</body>
+
+</html>
